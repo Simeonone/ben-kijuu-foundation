@@ -2,9 +2,10 @@
 session_start();
 
 // Railway database configuration
-if (getenv('DATABASE_URL')) {
+$database_url = getenv('DATABASE_URL') ?: getenv('MYSQL_URL');
+
+if ($database_url) {
     // Production - Railway
-    $database_url = getenv('DATABASE_URL');
     $db_parts = parse_url($database_url);
     
     define('DB_HOST', $db_parts['host']);
@@ -24,7 +25,7 @@ define('SITE_NAME', 'Ben Kijuu Foundation');
 define('SITE_DESCRIPTION', 'Fighting Liver Cancer, Fueling Hope');
 
 try {
-    if (getenv('DATABASE_URL')) {
+    if ($database_url) {
         $dsn = "mysql:host=".DB_HOST.";dbname=".DB_NAME.";charset=utf8mb4";
     } else {
         $dsn = "mysql:host=".DB_HOST.";dbname=".DB_NAME;
@@ -35,7 +36,7 @@ try {
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
     ]);
 } catch(PDOException $e) {
-    if (getenv('DATABASE_URL')) {
+    if ($database_url) {
         die("Database connection failed. Please try again later.");
     } else {
         die("Connection failed: " . $e->getMessage());
