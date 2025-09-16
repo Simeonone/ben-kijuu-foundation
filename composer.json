@@ -1,7 +1,10 @@
 {
     "require": {
-        "php": "^8.0",
-        "ext-pdo": "*",
-        "ext-pdo_mysql": "*"
+        "php": "^8.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "echo 'Dependencies installed successfully'"
+        ]
     }
 }
