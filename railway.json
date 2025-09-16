@@ -3,6 +3,6 @@
         "builder": "dockerfile"
     },
     "deploy": {
-        "startCommand": "php -S 0.0.0.0:$PORT"
+        "startCommand": "/start.sh"
     }
 }
