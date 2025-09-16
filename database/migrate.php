@@ -7,25 +7,26 @@ echo "<p>Setting up tables for Ben Kijuu Foundation...</p>";
 
 try {
     // Event registrations table
-    $pdo->exec("CREATE TABLE IF NOT EXISTS event_registrations (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        full_name VARCHAR(255) NOT NULL,
-        email VARCHAR(255) NOT NULL,
-        phone VARCHAR(20) NOT NULL,
-        nationality VARCHAR(100) NOT NULL,
-        gender ENUM('Male', 'Female') NOT NULL,
-        how_heard VARCHAR(100) NOT NULL,
-        tshirt_size ENUM('XS', 'S', 'M', 'L', 'XL', 'XXL') NOT NULL,
-        participation_type ENUM('In Person', 'Virtual') NOT NULL,
-        distance ENUM('5km', '10km', '21km') NOT NULL,
-        number_of_adults INT DEFAULT 1,
-        number_of_children INT DEFAULT 0,
-        total_people INT GENERATED ALWAYS AS (number_of_adults + number_of_children) STORED,
-        comments TEXT,
-        special_requirements TEXT,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-    )");
+$pdo->exec("CREATE TABLE IF NOT EXISTS event_registrations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    nationality VARCHAR(100) NOT NULL,
+    gender ENUM('Male', 'Female') NOT NULL,
+    how_heard VARCHAR(100) NOT NULL,
+    tshirt_size ENUM('XS', 'S', 'M', 'L', 'XL', 'XXL') NOT NULL,
+    participation_type ENUM('In Person', 'Virtual') NOT NULL,
+    distance ENUM('5km', '10km', '21km') NOT NULL,
+    number_of_adults INT DEFAULT 1,
+    number_of_children INT DEFAULT 0,
+    total_people INT GENERATED ALWAYS AS (number_of_adults + number_of_children) STORED,
+    comments TEXT,
+    special_requirements TEXT,
+    total_amount DECIMAL(10,2) DEFAULT 0.00,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)");
     echo "✓ Created event_registrations table<br>";
 
     // Contact submissions table
@@ -56,6 +57,10 @@ try {
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )");
     echo "✓ Created admin_users table<br>";
+
+    // Add after existing tables
+    // $pdo->exec("ALTER TABLE event_registrations ADD COLUMN IF NOT EXISTS total_amount DECIMAL(10,2) DEFAULT 0.00 AFTER special_requirements");
+    echo "✓ Added total_amount column to event_registrations<br>";
 
     // Create default admin user
     $stmt = $pdo->prepare("SELECT COUNT(*) FROM admin_users WHERE username = 'admin'");

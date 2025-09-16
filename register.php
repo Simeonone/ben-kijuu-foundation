@@ -129,50 +129,54 @@ include 'includes/header.php';
                                 </select>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <!-- This will show total automatically -->
+                                <!-- Auto-calculated -->
                                 <label class="form-label">Total People (Auto-Generated)</label>
-                                <input type="text" class="form-control" id="totalPeople" readonly value="1">
+                                <input type="text" class="form-control" id="totalPeopleInput" readonly value="1">
                             </div>
                         </div>
                         
                         <!-- Group Information -->
                         <div class="row mb-4 mt-4">
                             <div class="col-12">
-                                <h5 class="mb-3 text-primary">Group Information</h5>
+                                <h5 class="mb-3 text-primary">Group Information & Pricing</h5>
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">Number of Adults <span class="text-danger">*</span></label>
+                                <label class="form-label">Number of Adults <span class="text-danger">*</span> <small>(KES 1,500 each)</small></label>
                                 <select class="form-control" name="number_of_adults" id="adults" required>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10+</option>
+                                    <?php for ($i=1; $i<=10; $i++): ?>
+                                        <option value="<?= $i ?>"><?= $i ?></option>
+                                    <?php endfor; ?>
                                 </select>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">Number of Children</label>
+                                <label class="form-label">Number of Children <small>(KES 1,000 each)</small></label>
                                 <select class="form-control" name="number_of_children" id="children">
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10+</option>
+                                    <?php for ($i=0; $i<=10; $i++): ?>
+                                        <option value="<?= $i ?>"><?= $i ?></option>
+                                    <?php endfor; ?>
                                 </select>
+                            </div>
+                        </div>
+
+                        <!-- Pricing Summary -->
+                        <div class="mb-3">
+                            <div class="card border-primary">
+                                <div class="card-body">
+                                    <h6 class="card-title">Registration Summary</h6>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="mb-1"><span id="adultCount">1</span> Adult(s): KES <span id="adultCost">1,500</span></p>
+                                            <p class="mb-1"><span id="childCount">0</span> Children: KES <span id="childCost">0</span></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="mb-1"><strong>Total People: <span id="totalPeople">1</span></strong></p>
+                                            <p class="mb-0"><strong>Total Amount: KES <span id="totalAmount">1,500</span></strong></p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
@@ -185,91 +189,42 @@ include 'includes/header.php';
                         
                         <div class="mb-3">
                             <label class="form-label">Comments</label>
-                            <textarea class="form-control" name="comments" rows="3" placeholder="Any additional comments..."></textarea>
+                            <textarea class="form-control" name="comments" rows="3"></textarea>
                         </div>
                         
                         <div class="mb-3">
                             <label class="form-label">Special Requirements</label>
-                            <textarea class="form-control" name="special_requirements" rows="3" placeholder="Any special requirements or dietary restrictions..."></textarea>
+                            <textarea class="form-control" name="special_requirements" rows="3"></textarea>
                         </div>
                         
                         <!-- Consent Agreement -->
+                        <div class="row mb-4 mt-4">
+                            <div class="col-12">
+                                <h5 class="mb-3 text-primary">Agreement</h5>
+                                <div class="card border-warning">
+                                    <div class="card-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="consentAgreement" name="consent_agreement" required>
+                                            <label class="form-check-label" for="consentAgreement">
+                                                <strong><span class="text-danger">*</span> I have read and agree to the Participant Agreement, Waiver and Release of Liability</strong>
+                                            </label>
+                                        </div>
+                                        <div class="mt-2">
+                                            <button type="button" class="btn btn-outline-primary btn-sm" onclick="showConsent()">
+                                                View Agreement Terms
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-
-<!-- Submit Button -->
-<div class="text-center mt-4">
-    <button type="submit" class="btn btn-primary-custom btn-custom">
-        Complete Registration
-    </button>
-</div>
-
-<!-- Consent Modal -->
-<!-- Consent Agreement - SIMPLE VERSION -->
-<div class="row mb-4 mt-4">
-    <div class="col-12">
-        <h5 class="mb-3 text-primary">Agreement</h5>
-        <div class="card border-warning">
-            <div class="card-body">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="consentAgreement" name="consent_agreement" required>
-                    <label class="form-check-label" for="consentAgreement">
-                        <strong><span class="text-danger">*</span> I have read and agree to the Participant Agreement, Waiver and Release of Liability</strong>
-                    </label>
-                </div>
-                <div class="mt-2">
-                    <button type="button" class="btn btn-outline-primary btn-sm" onclick="showConsent()">
-                        View Agreement Terms
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-function showConsent() {
-    const terms = [
-        `1. Voluntary Participation
-I am voluntarily participating in the Liver Cancer Awareness Walk organized by the Ben Kijuu Foundation (“the Foundation”). I understand that participation involves physical activity which may include walking long distances, exposure to weather conditions, crowds, and other inherent risks.
-`,
-
-        `2. Assumption of Risk
-I acknowledge and accept that participation may involve certain risks, including but not limited to personal injury, illness, property damage, or other unforeseen incidents. I confirm that I am in good health, physically fit, and medically cleared to participate. I take full responsibility for my participation and voluntarily assume all risks associated with the event.
-`,
-
-        `3. Waiver and Release of Liability
-To the fullest extent permitted by law, I hereby release, discharge, and hold harmless the Ben Kijuu Foundation, its Trustees, officers, employees, volunteers, agents, sponsors, and partners from any and all claims, demands, actions, losses, liabilities, damages, costs, or expenses (including legal fees) arising from or connected with my participation in the event, whether caused by negligence or otherwise.
-`,
-
-        `4. Indemnity
-I agree to indemnify and keep indemnified the Foundation, its Trustees, officers, employees, volunteers, agents, sponsors, and partners against any loss, damage, liability, or costs they may incur arising from my actions, conduct, or participation in the event.
-`,
-
-        `5. Medical Treatment Consent
-In the event of a medical emergency, I consent to the administration of first aid or medical treatment deemed necessary by qualified personnel. I agree to bear all medical costs arising from such treatment.
-`,
-
-        `6. Use of Image and Likeness
-I consent to the use of my name, photographs, video recordings, or likeness taken during the event for publicity, awareness campaigns, reports, or promotional materials by the Foundation without compensation.
-`,
-
-        `7. Binding Effect
-I confirm that I have read and understood this Consent, Waiver, and Indemnity Agreement, and that it is binding upon me, my heirs, executors, administrators, successors, and assigns.`
-    ];
-
-    for (let i = 0; i < terms.length; i++) {
-        const proceed = confirm(terms[i] + "\n\nClick OK to continue reading, or Cancel to stop.");
-        if (!proceed) return; // stop if user cancels midway
-    }
-
-    // If they made it through all
-    document.getElementById('consentAgreement').checked = true;
-}
-
-
-</script>
-
-                        
+                        <!-- Submit Button -->
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary-custom btn-custom">
+                                Complete Registration
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -277,80 +232,87 @@ I confirm that I have read and understood this Consent, Waiver, and Indemnity Ag
     </div>
 </section>
 
-<!-- JavaScript for form enhancements -->
+<!-- JavaScript -->
 <script>
-// Update total people count
-function updateTotal() {
-    const adults = parseInt(document.getElementById('adults').value) || 0;
-    const children = parseInt(document.getElementById('children').value) || 0;
-    document.getElementById('totalPeople').value = adults + children;
+// Show consent terms
+function showConsent() {
+    const terms = [
+        `1. Voluntary Participation
+I am voluntarily participating in the Liver Cancer Awareness Walk organized by the Ben Kijuu Foundation...`,
+        `2. Assumption of Risk
+I acknowledge and accept that participation may involve certain risks...`,
+        `3. Waiver and Release of Liability
+To the fullest extent permitted by law, I hereby release...`,
+        `4. Indemnity
+I agree to indemnify and keep indemnified the Foundation...`,
+        `5. Medical Treatment Consent
+In the event of a medical emergency, I consent...`,
+        `6. Use of Image and Likeness
+I consent to the use of my name, photographs, video recordings...`,
+        `7. Binding Effect
+I confirm that I have read and understood this Consent, Waiver, and Indemnity Agreement...`
+    ];
+
+    for (let i = 0; i < terms.length; i++) {
+        const proceed = confirm(terms[i] + "\n\nClick OK to continue reading, or Cancel to stop.");
+        if (!proceed) return;
+    }
+    document.getElementById('consentAgreement').checked = true;
 }
 
-document.getElementById('adults').addEventListener('change', updateTotal);
-document.getElementById('children').addEventListener('change', updateTotal);
+// Pricing + form handling
+function updatePricing() {
+    const adults = parseInt(document.getElementById('adults').value) || 0;
+    const children = parseInt(document.getElementById('children').value) || 0;
 
-// Form submission handling
+    const adultCost = adults * 1500;
+    const childCost = children * 1000;
+    const totalCost = adultCost + childCost;
+    const totalPeople = adults + children;
+
+    // Update display
+    document.getElementById('adultCount').textContent = adults;
+    document.getElementById('childCount').textContent = children;
+    document.getElementById('adultCost').textContent = adultCost.toLocaleString();
+    document.getElementById('childCost').textContent = childCost.toLocaleString();
+    document.getElementById('totalPeople').textContent = totalPeople;
+    document.getElementById('totalAmount').textContent = totalCost.toLocaleString();
+    document.getElementById('totalPeopleInput').value = totalPeople;
+}
+
+document.getElementById('adults').addEventListener('change', updatePricing);
+document.getElementById('children').addEventListener('change', updatePricing);
+
+// Form submission
 document.getElementById('eventRegistrationForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const submitBtn = this.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Processing...';
-    submitBtn.disabled = true;
-    
-    fetch('process-registration.php', {
-        method: 'POST',
-        body: new FormData(this)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert('Thank you! Your registration has been completed successfully.');
-            this.reset();
-            updateTotal();
-        } else {
-            alert('Error: ' + data.message);
-        }
-    })
-    .catch(error => {
-        alert('Sorry, there was an error processing your registration. Please try again.');
-    })
-    .finally(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    });
-});
-
-
-// Form validation enhancement - check consent before submission
-document.getElementById('eventRegistrationForm').addEventListener('submit', function(e) {
-    // Check if consent is checked
     if (!document.getElementById('consentAgreement').checked) {
         e.preventDefault();
         alert('Please read and agree to the Participant Agreement, Waiver and Release of Liability before registering.');
         return false;
     }
-    
-    // Rest of your existing form submission code stays the same
+
     e.preventDefault();
-    
+
     const submitBtn = this.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Processing...';
     submitBtn.disabled = true;
-    
+
+    const adults = parseInt(document.getElementById('adults').value) || 0;
+    const children = parseInt(document.getElementById('children').value) || 0;
+    const totalAmount = (adults * 1500) + (children * 1000);
+
+    const formData = new FormData(this);
+    formData.append('total_amount', totalAmount);
+
     fetch('process-registration.php', {
         method: 'POST',
-        body: new FormData(this)
+        body: formData
     })
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            alert('Thank you! Your registration has been completed successfully.');
-            this.reset();
-            updateTotal();
-            // Uncheck the consent box after reset
-            document.getElementById('consentAgreement').checked = false;
+            window.location.href = `payment.php?registration_id=${data.registration_id}&amount=${totalAmount}`;
         } else {
             alert('Error: ' + data.message);
         }
@@ -363,6 +325,9 @@ document.getElementById('eventRegistrationForm').addEventListener('submit', func
         submitBtn.disabled = false;
     });
 });
+
+// Initialize pricing
+updatePricing();
 </script>
 
 <?php include 'includes/footer.php'; ?>

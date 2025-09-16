@@ -4,11 +4,6 @@ include 'includes/config.php';
 
 header('Content-Type: application/json');
 
-// Add error reporting for debugging
-error_reporting(E_ALL);
-ini_set('display_errors', 0); // Don't display errors in JSON response
-ini_set('log_errors', 1);
-
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo json_encode(['success' => false, 'message' => 'Invalid request method']);
     exit;
@@ -29,8 +24,9 @@ try {
     $number_of_children = intval($_POST['number_of_children'] ?? 0);
     $comments = trim($_POST['comments'] ?? '');
     $special_requirements = trim($_POST['special_requirements'] ?? '');
+    $total_amount = floatval($_POST['total_amount'] ?? 0);
     
-    // Validation
+    // Validation FIRST
     $errors = [];
     
     // Required fields validation
@@ -49,32 +45,25 @@ try {
         $errors[] = 'Invalid email format';
     }
     
-    // Phone format validation (more lenient)
-    if (!empty($phone) && !preg_match('/^\+254\d{9}$/', $phone)) {
-        // If it doesn't match the strict format, try to be more lenient
-        if (!preg_match('/^(\+254|254|0)\d{9}$/', $phone)) {
-            $errors[] = 'Invalid phone number format';
-        }
+    // Phone format validation
+    if (!empty($phone) && !preg_match('/^(\+254|254|0)\d{9}$/', $phone)) {
+        $errors[] = 'Invalid phone number format';
     }
     
-    // Check for valid enum values
-    $valid_genders = ['Male', 'Female'];
-    if (!in_array($gender, $valid_genders)) {
+    // Enum validations
+    if (!in_array($gender, ['Male', 'Female'])) {
         $errors[] = 'Invalid gender selection';
     }
     
-    $valid_tshirt_sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
-    if (!in_array($tshirt_size, $valid_tshirt_sizes)) {
+    if (!in_array($tshirt_size, ['XS', 'S', 'M', 'L', 'XL', 'XXL'])) {
         $errors[] = 'Invalid t-shirt size';
     }
     
-    $valid_participation_types = ['In Person', 'Virtual'];
-    if (!in_array($participation_type, $valid_participation_types)) {
+    if (!in_array($participation_type, ['In Person', 'Virtual'])) {
         $errors[] = 'Invalid participation type';
     }
     
-    $valid_distances = ['5km', '10km', '21km'];
-    if (!in_array($distance, $valid_distances)) {
+    if (!in_array($distance, ['5km', '10km', '21km'])) {
         $errors[] = 'Invalid distance selection';
     }
     
@@ -87,7 +76,7 @@ try {
         $errors[] = 'Number of children must be between 0 and 10';
     }
     
-    // Check if email or phone already registered (more comprehensive duplicate prevention)
+    // Check for duplicates
     $duplicateCheckStmt = $pdo->prepare("SELECT id, email, phone FROM event_registrations WHERE email = ? OR phone = ?");
     $duplicateCheckStmt->execute([$email, $phone]);
     $existingRegistration = $duplicateCheckStmt->fetch();
@@ -100,7 +89,7 @@ try {
         }
     }
 
-    // If there are validation errors, return them
+    // Return errors if any
     if (!empty($errors)) {
         echo json_encode([
             'success' => false, 
@@ -109,53 +98,33 @@ try {
         exit;
     }
     
-    // Insert registration into database
+    // Insert registration into database (ONLY ONCE)
     $stmt = $pdo->prepare("
         INSERT INTO event_registrations (
             full_name, email, phone, nationality, gender, how_heard, 
             tshirt_size, participation_type, distance, number_of_adults, 
-            number_of_children, comments, special_requirements
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            number_of_children, comments, special_requirements, total_amount
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ");
     
     $result = $stmt->execute([
         $full_name, $email, $phone, $nationality, $gender, $how_heard,
         $tshirt_size, $participation_type, $distance, $number_of_adults,
-        $number_of_children, $comments, $special_requirements
+        $number_of_children, $comments, $special_requirements, $total_amount
     ]);
     
     if ($result) {
-        // Get the registration ID for confirmation
         $registration_id = $pdo->lastInsertId();
-        
-        // Try to send confirmation email (but don't fail if it doesn't work)
-        try {
-            sendConfirmationEmail($email, $full_name, $registration_id, [
-                'distance' => $distance,
-                'participation_type' => $participation_type,
-                'total_people' => $number_of_adults + $number_of_children
-            ]);
-        } catch (Exception $emailError) {
-            // Log email error but don't fail the registration
-            error_log("Email sending failed: " . $emailError->getMessage());
-        }
         
         echo json_encode([
             'success' => true,
-            'message' => 'Registration completed successfully! Thank you for joining our event.',
+            'message' => 'Registration completed successfully!',
             'registration_id' => $registration_id
         ]);
-        
     } else {
-        throw new Exception('Failed to save registration to database');
+        throw new Exception('Failed to save registration');
     }
     
-} catch (PDOException $e) {
-    error_log("Database error in registration: " . $e->getMessage());
-    echo json_encode([
-        'success' => false, 
-        'message' => 'Database error occurred. Please try again.'
-    ]);
 } catch (Exception $e) {
     error_log("Registration error: " . $e->getMessage());
     echo json_encode([
@@ -163,6 +132,7 @@ try {
         'message' => 'An error occurred while processing your registration. Please try again.'
     ]);
 }
+
 
 // Function to send confirmation email to participant
 function sendConfirmationEmail($email, $name, $registration_id, $details) {
