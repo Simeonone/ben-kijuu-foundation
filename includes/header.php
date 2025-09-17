@@ -6,72 +6,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo isset($page_title) ? $page_title . ' - ' : ''; ?><?php echo SITE_NAME; ?></title>
+    <title><?php echo $page_title . ' | ' . SITE_NAME; ?></title>
     <meta name="description" content="<?php echo SITE_DESCRIPTION; ?>">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.php">
-                <img src="assets/images/logo.png" alt="<?php echo SITE_NAME; ?>" height="40" class="me-2">
-                <?php echo SITE_NAME; ?>
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg" style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 1rem 0;">
+    <div class="container">
+        <!-- Logo - Bigger -->
+        <a class="navbar-brand" href="index.php">
+            <img src="assets/images/logo.png" alt="<?php echo SITE_NAME; ?>" style="height: 60px; width: auto;">
+        </a>
+        
+        <!-- Mobile toggle button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border: none;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navigation menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Green background wrapper -->
+            <div class="navbar-nav-wrapper ms-auto" style="background: #2d5016; border-radius: 50px; padding: 8px 20px;">
+                <ul class="navbar-nav align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="index.php" style="color: white !important; padding: 8px 16px; margin: 0 4px;">Home</a>
                     </li>
+                    
+                    <!-- Who We Are Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white !important; padding: 8px 16px; margin: 0 4px;">
                             Who We Are
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="about.php">About Us</a></li>
-                            <li><a class="dropdown-item" href="story.php">The Story</a></li>
+                        <ul class="dropdown-menu" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                            <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">What We Do</a></li>
+                            <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Why Volunteer With Us</a></li>
+                            <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">How To Get Started</a></li>
                         </ul>
                     </li>
+                    
+                    <!-- About Liver Cancer Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="liverCancerDropdown" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white !important; padding: 8px 16px; margin: 0 4px;">
                             About Liver Cancer
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="symptoms.php">Symptoms</a></li>
-                            <li><a class="dropdown-item" href="treatment.php">Treatment</a></li>
+                        <ul class="dropdown-menu" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                            <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">What Is Liver Cancer</a></li>
+                            <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Risk Factors</a></li>
+                            <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Prevention, Detection & Treatment</a></li>
+                            <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Treatment Options</a></li>
                         </ul>
                     </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="events.php">Events</a>
+                        <a class="nav-link" href="events.php" style="color: white !important; padding: 8px 16px; margin: 0 4px;">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact Us</a>
+                        <a class="nav-link" href="contact.php" style="color: white !important; padding: 8px 16px; margin: 0 4px;">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.php">FAQs</a>
+                        <a class="nav-link" href="faq.php" style="color: white !important; padding: 8px 16px; margin: 0 4px;">FAQs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.php">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-danger ms-2 donate-btn" href="donate.php">♥ Donate Now</a>
+                        <a class="nav-link" href="blog.php" style="color: white !important; padding: 8px 16px; margin: 0 4px;">Blog</a>
                     </li>
                 </ul>
             </div>
+            
+            <!-- Donate Button (outside green wrapper) -->
+            <a href="donate.php" class="btn ms-3" style="background: #f5a623; color: #333; border-radius: 50px; padding: 12px 24px; font-weight: 600;">
+                <i class="fas fa-heart me-2"></i>Donate Now
+            </a>
         </div>
-    </nav>
+    </div>
+</nav>
+
+<script>
+// Smooth scroll to footer
+function scrollToFooter() {
+    document.querySelector('footer').scrollIntoView({ 
+        behavior: 'smooth' 
+    });
+}
+</script>
