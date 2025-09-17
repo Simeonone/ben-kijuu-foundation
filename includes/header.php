@@ -36,7 +36,7 @@
         
         <!-- Navigation menu with green background wrapper -->
         <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav-wrapper mx-auto" style="background: #2d5016; border-radius: 50px; padding: 15px 40px;">
+            <div class="navbar-nav-wrapper mx-auto" style="background: #32665B; border-radius: 50px; padding: 15px 40px;">
                 <ul class="navbar-nav align-items-center">
                     <li class="nav-item">
                         <a class="nav-link" href="index.php" style="color: white !important; padding: 15px 10px; margin: 0 5px; font-size: 1.15rem;">Home</a>

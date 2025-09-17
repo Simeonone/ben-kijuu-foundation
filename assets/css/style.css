@@ -1809,3 +1809,29 @@ html {
         width: 60px !important;
     }
 }
+
+/* Change this */
+.navbar-nav-wrapper {
+    padding: 15px 40px !important;
+    background: #2d5016 !important;
+    /* Change this line */
+    border-radius: 50px !important;
+}
+
+/* To this */
+.navbar-nav-wrapper {
+    padding: 15px 40px !important;
+    background: #32665B !important;
+    /* Updated to correct color */
+    border-radius: 50px !important;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav-wrapper {
+        width: 100%;
+        text-align: center;
+        padding: 20px !important;
+        background: #32665B !important;
+        /* Make sure this matches too */
+    }
+}

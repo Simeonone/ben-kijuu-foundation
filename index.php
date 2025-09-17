@@ -98,8 +98,8 @@ include 'includes/header.php';
                     <div class="stats-icon mb-3">
                         <i class="fas fa-users text-primary" style="font-size: 3rem;"></i>
                     </div>
-                    <h3 class="stats-number display-4 fw-bold" style="color: #2d5016;">500+</h3>
-                    <p class="stats-label text-muted">Active Volunteers</p>
+                    <h3 class="stats-number display-4 fw-bold" style="color: #2d5016;">300+</h3>
+                    <p class="stats-label text-muted">Volunteers to be Recruited</p>
                 </div>
             </div>
             
@@ -110,7 +110,7 @@ include 'includes/header.php';
                         <i class="fas fa-flask text-success" style="font-size: 3rem;"></i>
                     </div>
                     <h3 class="stats-number display-4 fw-bold" style="color: #2d5016;">50+</h3>
-                    <p class="stats-label text-muted">Research Projects Funded</p>
+                    <p class="stats-label text-muted">Research Projects to be Funded</p>
                 </div>
             </div>
             
@@ -128,7 +128,7 @@ include 'includes/header.php';
             </div>
             <div class="col-lg-6">
                 <span class="text-uppercase" style="color: #f5a623; font-size: 0.9rem; font-weight: 600;">About Us</span>
-                <h2 class="section-title text-start mt-2 mb-4" style="color: #333; font-size: 2.5rem;">Every step forward brings us closer to<br>hope and healing.</h2>
+                <h2 class="section-title text-start mt-2 mb-4" style="color: #333; font-size: 2.5rem;">Every step forward brings us closer to hope and healing.</h2>
                 <p class="mb-4" style="color: #666; line-height: 1.6;">
                     The Ben Kijuu Foundation strives to provide support, education, and resources to those affected by liver cancer and to fund research for better treatments and ultimately a cure.
                 </p>
