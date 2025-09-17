@@ -22,7 +22,7 @@
 
 <!-- Navigation -->
 <!-- Navigation - Aligned with content and scaled up -->
-<nav class="navbar navbar-expand-lg sticky-top" style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 2rem 0; z-index: 1000;">
+<nav class="navbar navbar-expand-lg sticky-top" style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 1.5rem 0; z-index: 1000;">
     <div class="container"> <!-- Changed back to container to match content width -->
         <!-- Logo -->
         <a class="navbar-brand me-4" href="index.php">
@@ -43,29 +43,29 @@
             </li>
             
             <!-- Who We Are Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                    Who We Are
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">What We Do</a></li>
-                    <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Why Volunteer With Us</a></li>
-                    <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">How To Get Started</a></li>
-                </ul>
-            </li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+        Who We Are
+    </a>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="what-we-do.php">What We Do</a></li>
+        <li><a class="dropdown-item" href="what-we-do.php#why-volunteer">Why Volunteer With Us</a></li>
+        <li><a class="dropdown-item" href="what-we-do.php#why-volunteer">How To Get Started</a></li>
+    </ul>
+</li>
             
-            <!-- About Liver Cancer Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                    About Liver Cancer
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">What Is Liver Cancer</a></li>
-                    <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Risk Factors</a></li>
-                    <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Prevention, Detection & Treatment</a></li>
-                    <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Treatment Options</a></li>
-                </ul>
-            </li>
+<!-- About Liver Cancer Dropdown -->
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+        About Liver Cancer
+    </a>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="what-is-liver-cancer.php">What Is Liver Cancer</a></li>
+        <li><a class="dropdown-item" href="what-is-liver-cancer.php#risk-factors">Risk Factors</a></li>
+        <li><a class="dropdown-item" href="what-is-liver-cancer.php#prevention-detection">Prevention, Detection & Treatment</a></li>
+        <li><a class="dropdown-item" href="what-is-liver-cancer.php#treatment">Treatment Options</a></li>
+    </ul>
+</li>
             
             <li class="nav-item">
                 <a class="nav-link" href="events.php">Events</a>

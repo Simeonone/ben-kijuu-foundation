@@ -206,7 +206,7 @@ include 'includes/header.php';
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" id="consentAgreement" name="consent_agreement" required>
                                             <label class="form-check-label" for="consentAgreement">
-                                                <strong><span class="text-danger">*</span> I have read and agree to the Participant Agreement, Waiver and Release of Liability</strong>
+                                                <strong><span class="text-danger">*</span> I have read and agree to the Participant Agreement</strong>
                                             </label>
                                         </div>
                                         <div class="mt-2">

@@ -577,6 +577,30 @@ function hideEventPopup() {
 }
 
 
+// Handle smooth scrolling to anchor links from external pages
+document.addEventListener('DOMContentLoaded', function () {
+    // Check if there's a hash in the URL when the page loads
+    if (window.location.hash) {
+        const targetId = window.location.hash;
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            // Add a small delay to ensure the page is fully loaded
+            setTimeout(() => {
+                const headerOffset = 120; // Account for your sticky header height
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }, 100);
+        }
+    }
+});
+
+
 
 // Console welcome message
 console.log('%c🎗️ Ben Kijuu Foundation', 'color: #dc2626; font-size: 20px; font-weight: bold;');

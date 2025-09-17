@@ -40,7 +40,7 @@ body {
     font-family: var(--font-primary);
     line-height: 1.6;
     color: var(--dark-color);
-    padding-top: 0;
+    padding-top: 120px;
 }
 
 /* Typography */
@@ -1737,7 +1737,7 @@ html {
 
 /* Header alignment and scaling */
 .navbar {
-    padding: 2rem 0 !important;
+    padding: 1.5rem 0 !important;
     /* Scaled up padding */
 }
 
@@ -1949,4 +1949,46 @@ html {
     .navbar-collapse.show {
         display: block !important;
     }
+}
+
+.navbar {
+    padding: 1.5rem 0 !important;
+    /* Reduced from 2rem */
+}
+
+/* Then reduce body padding accordingly */
+body {
+    padding-top: 120px;
+}
+
+html {
+    scroll-padding-top: 120px;
+}
+
+@media (max-width: 991px) {
+    body {
+        padding-top: 90px;
+    }
+
+    html {
+        scroll-padding-top: 90px;
+    }
+}
+
+/* Ensure the font-script class uses your script font */
+.font-script {
+    font-family: var(--font-script) !important;
+    font-style: italic;
+}
+
+/* Value cards hover effect */
+.value-card:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/* Breadcrumb styling */
+.breadcrumb-item+.breadcrumb-item::before {
+    content: "→";
+    color: #DAA520;
 }
