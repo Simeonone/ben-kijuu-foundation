@@ -85,18 +85,27 @@ include 'includes/header.php';
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="hero-content text-start">
-                    <p class="hero-subtitle font-script mb-3" style="color: #2d5016; font-size: 1.3rem;">Fighting Liver Cancer, Fueling Hope</p>
+                    <p class="hero-subtitle font-script mb-3" style="color: #32665B; font-size: 1.3rem;">Fighting Liver Cancer, Fueling Hope</p>
                     <h1 class="hero-title mb-4" style="color: #333; font-size: 3.5rem; font-weight: 700;">
                         Together<br>
-                        <span style="color: #f5a623;">We're Stronger</span>
+                        <span style="color: #DAA520;">We're Stronger</span>
                     </h1>
                     <p class="hero-description lead mb-5" style="color: #666; font-size: 1.2rem;">
                         Join our community of warriors, supporters, and researchers in the 
                         battle against liver cancer. Every step forward brings us closer to hope and healing.
                     </p>
-                    <div class="hero-buttons">
-                        <a href="#about" class="btn btn-lg me-3 px-4 py-3" style="background: #2d5016; color: white; border-radius: 50px;">Tell Me More</a>
-                        <a href="events.php" class="btn btn-outline-secondary btn-lg px-4 py-3" style="border-radius: 50px;">Join The Campaign</a>
+                    <div class="hero-buttons d-flex align-items-center">
+                        <a href="#about" class="btn btn-lg me-4 px-4 py-3" style="background: #32665B; color: white; border-radius: 50px;">Tell Me More</a>
+                        
+                        <!-- Golden Play Button with Ripple Effect -->
+                        <a href="events.php" class="play-btn-wrapper">
+                            <div class="play-btn">
+                                <div class="ripple-1"></div>
+                                <div class="ripple-2"></div>
+                                <div class="ripple-3"></div>
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

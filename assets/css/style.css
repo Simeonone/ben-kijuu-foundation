@@ -93,7 +93,7 @@ body {
 .hero-section {
     margin-top: 0;
     background: var(--white-color) !important;
-        color: var(--text-dark) !important;
+    color: var(--text-dark) !important;
     padding: 4rem 0;
     min-height: 70vh;
     display: flex;
@@ -319,7 +319,7 @@ body {
 
 /* CTA Section */
 .cta-section {
-background: linear-gradient(135deg, var(--primary-color) 0%, #2a5650 100%) !important;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2a5650 100%) !important;
     color: white !important;
     padding: 5rem 0;
     text-align: center;
@@ -1083,8 +1083,8 @@ a[href*="donate"]:hover,
 
 .navbar-nav-wrapper {
     background: var(--primary-color) !important;
-        border-radius: 50px;
-        padding: 12px 30px;
+    border-radius: 50px;
+    padding: 12px 30px;
 }
 
 .navbar-nav .nav-link {
@@ -1359,4 +1359,116 @@ html {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Golden Play Button with Ripple Effect */
+.play-btn-wrapper {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
 
+.play-btn {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #DAA520, #FFD700);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.play-btn i {
+    color: white;
+    font-size: 24px;
+    margin-left: 4px;
+    /* Slight offset to center the triangle */
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+}
+
+/* Ripple Effects */
+/* .play-btn .ripple-1,
+.play-btn .ripple-2,
+.play-btn .ripple-3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgba(218, 165, 32, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripple 2s infinite ease-out;
+}
+
+.play-btn .ripple-2 {
+    animation-delay: 0.5s;
+    border-color: rgba(218, 165, 32, 0.3);
+}
+
+.play-btn .ripple-3 {
+    animation-delay: 1s;
+    border-color: rgba(218, 165, 32, 0.2);
+} */
+
+/* @keyframes ripple {
+    0% {
+        width: 80px;
+        height: 80px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 160px;
+        height: 160px;
+        opacity: 0;
+    }
+} */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .play-btn-wrapper {
+        margin-top: 1rem;
+    }
+
+    .play-btn {
+        width: 60px;
+        height: 60px;
+    }
+
+    .play-btn i {
+        font-size: 20px;
+    }
+
+    .play-btn .ripple-1,
+    .play-btn .ripple-2,
+    .play-btn .ripple-3 {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* @keyframes ripple {
+        0% {
+            width: 60px;
+            height: 60px;
+            opacity: 1;
+        }
+
+        100% {
+            width: 120px;
+            height: 120px;
+            opacity: 0;
+        }
+    } */
+}
