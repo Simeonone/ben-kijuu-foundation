@@ -26,7 +26,7 @@
     <div class="container">
         <!-- Logo - Bigger -->
         <a class="navbar-brand" href="index.php">
-            <img src="assets/images/logo.png" alt="Ben Kijuu Foundation" style="height: 130px; width: 130px;">
+            <img src="assets/images/logo.png" alt="Ben Kijuu Foundation" style="height: 100%; width: 70px;">
         </a>
         
         <!-- Mobile toggle button -->
