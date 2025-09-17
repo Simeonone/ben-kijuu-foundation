@@ -35,58 +35,58 @@
         </button>
         
         <!-- Navigation menu with green background wrapper -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav-wrapper mx-auto" style="background: #32665B; border-radius: 50px; padding: 15px 40px;">
-                <ul class="navbar-nav align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php" style="color: white !important; padding: 15px 10px; margin: 0 5px; font-size: 1.15rem;">Home</a>
-                    </li>
-                    
-                    <!-- Who We Are Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white !important; padding: 15px 10px; margin: 0 5px; font-size: 1.15rem;">
-                            Who We Are
-                        </a>
-                        <ul class="dropdown-menu" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                            <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">What We Do</a></li>
-                            <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Why Volunteer With Us</a></li>
-                            <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">How To Get Started</a></li>
-                        </ul>
-                    </li>
-                    
-                    <!-- About Liver Cancer Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white !important; padding: 15px 10px; margin: 0 5px; font-size: 1.15rem;">
-                            About Liver Cancer
-                        </a>
-                        <ul class="dropdown-menu" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                            <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">What Is Liver Cancer</a></li>
-                            <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Risk Factors</a></li>
-                            <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Prevention, Detection & Treatment</a></li>
-                            <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Treatment Options</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="events.php" style="color: white !important; padding: 15px 10px; margin: 0 5px; font-size: 1.15rem;">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.php" style="color: white !important; padding: 15px 10px; margin: 0 5px; font-size: 1.15rem;">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="faq.php" style="color: white !important; padding: 15px 10px; margin: 0 8px; font-size: 1.15rem;">FAQs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.php" style="color: white !important; padding: 15px 10px; margin: 0 8px; font-size: 1.15rem;">Blog</a>
-                    </li>
-                </ul>
-            </div>
+<div class="collapse navbar-collapse" id="navbarNav">
+    <div class="navbar-nav-wrapper mx-auto">
+        <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+                <a class="nav-link" href="index.php">Home</a>
+            </li>
             
-            <!-- Donate Button - Scaled up -->
-            <a href="donate.php" class="btn ms-4" style="background: #f5a623; color: #333; border-radius: 50px; padding: 18px 35px; font-weight: 600; font-size: 1.15rem;">
-                <i class="fas fa-heart me-2"></i>Donate Now
-            </a>
-        </div>
+            <!-- Who We Are Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Who We Are
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">What We Do</a></li>
+                    <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Why Volunteer With Us</a></li>
+                    <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">How To Get Started</a></li>
+                </ul>
+            </li>
+            
+            <!-- About Liver Cancer Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    About Liver Cancer
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">What Is Liver Cancer</a></li>
+                    <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Risk Factors</a></li>
+                    <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Prevention, Detection & Treatment</a></li>
+                    <li><a class="dropdown-item" href="#footer" onclick="scrollToFooter()">Treatment Options</a></li>
+                </ul>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="events.php">Events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.php">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="faq.php">FAQs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog.php">Blog</a>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Donate Button -->
+    <a href="donate.php" class="btn ms-4 donate-btn-mobile">
+        <i class="fas fa-heart me-2"></i>Donate Now
+    </a>
+</div>
     </div>
 </nav>
 <script>
