@@ -69,7 +69,7 @@
         <div class="row">
             <!-- Foundation Info -->
             <div class="col-lg-3 col-md-6 mb-4">
-                <img src="assets/images/logo-white.png" alt="Ben Kijuu Foundation" height="40" class="mb-3">
+                <img src="assets/images/logo.png" alt="Ben Kijuu Foundation" height="40" class="mb-3">
                 <h5 class="mb-3" style="color: #f5a623;">Ben Kijuu Foundation</h5>
                 <p class="mb-4" style="color: #d1d5db; line-height: 1.6;">
                     Join us in raising vital funds for those battling liver cancer and in spreading awareness about this important cause.
