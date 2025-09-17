@@ -223,7 +223,7 @@ include 'includes/header.php';
                             We organize various events to raise money for research and support services. 
                             Donating is one way to join our community of warriors and supporters.
                         </p>
-                        <a href="volunteer.php" class="btn btn-primary-custom btn-custom">Donate Now</a>
+                        <a href="volunteer.php" class="th-btn btn-custom">Donate Now</a>
                     </div>
                 </div>
             </div>
@@ -248,7 +248,7 @@ include 'includes/header.php';
                     Choose your distance: 5km, 10km, or 21km. Participate in person or virtually.
                 </p>
                 <div class="mt-4">
-                    <a href="register.php" class="btn btn-primary-custom btn-custom me-3">Register Now</a>
+                    <a href="register.php" class="th-btn btn-custom me-3">Register Now</a>
                     <a href="events.php" class="btn btn-outline-custom btn-custom">View All Events</a>
                 </div>
             </div>
@@ -309,7 +309,7 @@ include 'includes/header.php';
                 </div>
                 
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary-custom btn-custom">Submit</button>
+                    <button type="submit" class="th-btn btn-custom">Submit</button>
                 </div>
             </form>
         </div>

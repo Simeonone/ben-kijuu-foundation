@@ -2,41 +2,29 @@
 
 /* Root Variables */
 :root {
-
-    /* --primary-color: #1A685B; */
-    /* Forest green */
-    /* --primary-color-hover: #155951; */
-    /* Darker green for hover */
-    /* --primary-color-light: rgba(26, 104, 91, 0.1); */
-    /* Light version for backgrounds */
-    /* --secondary-color: #059669; */
-    /* Keep this green for accents */
-    /* --donate-button-color: #dc2626; */
-    /* Keep red ONLY for donate buttons */
-    /* --dark-color: #1f2937; */
-    /* --light-gray: #f8fafc; */
-    /* --medium-gray: #6b7280; */
-    /* --border-color: #e5e7eb; */
-    /* --font-primary: 'Inter', sans-serif; */
-    /* --font-script: 'Caveat', cursive; */
-    /* --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05); */
-    /* --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1); */
-    /* --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1); */
-
-    --primary-color: #2d5016;
-    /* Dark forest green from WordPress */
-    --secondary-color: #f5a623;
-    /* Gold/orange from WordPress */
+    /* WordPress Donat theme exact colors */
+    --primary-color: #32665B;
+    /* From .text-primary-theme in child theme */
+    --theme-color: #32665B;
+    /* Primary theme color */
+    --theme-color2: #DAA520;
+    /* Secondary color (goldenrod) */
+    --secondary-color: #DAA520;
+    /* Gold/orange accent */
     --tertiary-color: #4a7c59;
     /* Medium green */
-    --donate-button-color: #dc3545;
-    /* Keep red for donate only */
 
+    /* Supporting colors from WordPress theme */
+    --white-color: #ffffff;
     --text-dark: #333333;
     --text-light: #666666;
     --background-light: #f8f9fa;
     --border-color: #e5e7eb;
 
+    /* Keep donate button red as exception */
+    --donate-button-color: #dc3545;
+
+    /* Font families */
     --font-primary: 'Inter', sans-serif;
     --font-script: 'Caveat', cursive;
 }
@@ -104,8 +92,8 @@ body {
 /* Hero Section */
 .hero-section {
     margin-top: 0;
-    background: #f8f9fa !important;
-    color: var(--text-dark) !important;
+    background: var(--white-color) !important;
+        color: var(--text-dark) !important;
     padding: 4rem 0;
     min-height: 70vh;
     display: flex;
@@ -188,7 +176,12 @@ body {
 /* Stats Section */
 .stats-section {
     padding: 4rem 0;
-    background-color: #f0f7f0 !important;
+    background-color: #f0f8f6 !important;
+}
+
+.stats-icon i {
+    color: var(--theme-color2) !important;
+    /* Gold icons */
 }
 
 .stats-card {
@@ -326,9 +319,9 @@ body {
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #b91c1c 100%);
+background: linear-gradient(135deg, var(--primary-color) 0%, #2a5650 100%) !important;
+    color: white !important;
     padding: 5rem 0;
-    color: white;
     text-align: center;
 }
 
@@ -433,6 +426,10 @@ body {
     .cta-title {
         font-size: 2rem;
     }
+}
+
+.hero-title span {
+    color: var(--theme-color2) !important;
 }
 
 /* Utility Classes */
@@ -1085,9 +1082,9 @@ a[href*="donate"]:hover,
 }
 
 .navbar-nav-wrapper {
-    background: #2d5016;
-    border-radius: 50px;
-    padding: 8px 20px;
+    background: var(--primary-color) !important;
+        border-radius: 50px;
+        padding: 12px 30px;
 }
 
 .navbar-nav .nav-link {
@@ -1257,3 +1254,109 @@ html {
         width: 50px;
     }
 }
+
+/* Primary buttons - WordPress theme color */
+.btn-primary-custom,
+.th-btn {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover,
+.th-btn:hover {
+    background: #2a5650 !important;
+    /* Darker shade of primary */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(50, 102, 91, 0.4);
+}
+
+/* Secondary buttons - Gold color */
+.btn-warning,
+.btn-secondary-custom {
+    background: var(--theme-color2) !important;
+    border-color: var(--theme-color2) !important;
+    color: #333 !important;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.btn-warning:hover,
+.btn-secondary-custom:hover {
+    background: #b8860b !important;
+    /* Darker gold */
+    color: #333 !important;
+}
+
+/* Price card styling from WordPress theme */
+.price-card,
+.feature-card,
+.event-card {
+    position: relative;
+    padding: 30px;
+    border-radius: 5%;
+    /* Matches WordPress theme */
+    background: var(--white-color);
+    text-align: center;
+    min-height: 350px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.price-card:hover,
+.feature-card:hover,
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Keep donate buttons with gold color in CTA */
+.cta-section .btn[href*="donate"] {
+    background: var(--theme-color2) !important;
+    color: #333 !important;
+    border: none !important;
+}
+
+/* Text color utilities */
+.text-primary-theme {
+    color: var(--primary-color) !important;
+}
+
+.text-theme {
+    color: var(--primary-color) !important;
+}
+
+.text-theme2 {
+    color: var(--theme-color2) !important;
+}
+
+/* Background utilities */
+.bg-theme {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-theme2 {
+    background-color: var(--theme-color2) !important;
+}
+
+/* Border utilities */
+.border-theme {
+    border-color: var(--primary-color) !important;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 0.2rem rgba(50, 102, 91, 0.25) !important;
+}
+
+.contact-form {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+

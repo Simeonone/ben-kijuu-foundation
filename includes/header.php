@@ -39,12 +39,12 @@
             <div class="navbar-nav-wrapper ms-auto" style="background: #2d5016; border-radius: 50px; padding: 12px 30px;">
                 <ul class="navbar-nav align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php" style="color: white !important; padding: 12px 20px; margin: 0 6px; font-size: 1.1rem;">Home</a>
+                        <a class="nav-link" href="index.php" style="color: white !important; padding: 12px 8px; margin: 0 3px; font-size: 1.1rem;">Home</a>
                     </li>
                     
                     <!-- Who We Are Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white !important; padding: 12px 20px; margin: 0 6px; font-size: 1.1rem;">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white !important; padding: 12px 8px; margin: 0 3px; font-size: 1.1rem;">
                             Who We Are
                         </a>
                         <ul class="dropdown-menu" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
@@ -56,7 +56,7 @@
                     
                     <!-- About Liver Cancer Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white !important; padding: 12px 20px; margin: 0 6px; font-size: 1.1rem;">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white !important; padding: 12px 8px; margin: 0 3px; font-size: 1.1rem;">
                             About Liver Cancer
                         </a>
                         <ul class="dropdown-menu" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
@@ -68,16 +68,16 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="events.php" style="color: white !important; padding: 12px 20px; margin: 0 6px; font-size: 1.1rem;">Events</a>
+                        <a class="nav-link" href="events.php" style="color: white !important; padding: 12px 8px; margin: 0 3px; font-size: 1.1rem;">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php" style="color: white !important; padding: 12px 20px; margin: 0 6px; font-size: 1.1rem;">Contact Us</a>
+                        <a class="nav-link" href="contact.php" style="color: white !important; padding: 12px 8px; margin: 0 3px; font-size: 1.1rem;">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.php" style="color: white !important; padding: 12px 20px; margin: 0 6px; font-size: 1.1rem;">FAQs</a>
+                        <a class="nav-link" href="faq.php" style="color: white !important; padding: 12px 8px; margin: 0 6px; font-size: 1.1rem;">FAQs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.php" style="color: white !important; padding: 12px 20px; margin: 0 6px; font-size: 1.1rem;">Blog</a>
+                        <a class="nav-link" href="blog.php" style="color: white !important; padding: 12px 8px; margin: 0 6px; font-size: 1.1rem;">Blog</a>
                     </li>
                 </ul>
             </div>
