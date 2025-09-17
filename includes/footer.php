@@ -166,9 +166,9 @@
                 <div class="col-lg-6">
                     <p style="color: #9ca3af; margin: 0;">&copy; Copyright <?php echo date('Y'); ?> Ben Kijuu Foundation. All Rights Reserved.</p>
                 </div>
-                <div class="col-lg-6 text-lg-end">
+                <!-- <div class="col-lg-6 text-lg-end">
                     <a href="donate.php" class="btn btn-danger btn-sm" style="border-radius: 20px;">♥ Donate Now</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

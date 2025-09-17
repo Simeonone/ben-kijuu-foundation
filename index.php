@@ -268,9 +268,9 @@ include 'includes/header.php';
                     Join us in raising vital funds for those battling liver cancer and 
                     in spreading awareness about this important cause.
                 </p>
-                <a href="donate.php" class="btn btn-lg px-5 py-3" style="background: #f5a623; color: #333; border: none; border-radius: 50px; font-weight: 600; font-size: 1.1rem;">
+                <!-- <a href="donate.php" class="btn btn-lg px-5 py-3" style="background: #f5a623; color: #333; border: none; border-radius: 50px; font-weight: 600; font-size: 1.1rem;">
                     ♥ Donate Now
-                </a>
+                </a> -->
             </div>
         </div>
     </div>
