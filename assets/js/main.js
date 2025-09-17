@@ -270,7 +270,8 @@ function removeErrorMessage(field) {
 // =============================================
 
 function initScrollEffects() {
-    // Parallax effect for hero section
+    // REMOVE OR COMMENT OUT this parallax section:
+    /*
     const heroSection = document.querySelector('.hero-section');
     if (heroSection) {
         window.addEventListener('scroll', () => {
@@ -279,11 +280,10 @@ function initScrollEffects() {
             heroSection.style.transform = `translateY(${parallax}px)`;
         });
     }
+    */
 
-    // Back to top button
+    // Keep only the back to top button and progress bar
     createBackToTopButton();
-
-    // Progress bar
     createProgressBar();
 }
 

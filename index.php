@@ -59,7 +59,7 @@ include 'includes/header.php';
                 </div>
                 
                 <!-- Event highlights -->
-                <div class="event-highlights">
+                <!-- <div class="event-highlights">
                     <div class="highlight-item">
                         <span class="highlight-icon">📍</span>
                         <span>Karura Forest</span>
@@ -72,7 +72,7 @@ include 'includes/header.php';
                         <span class="highlight-icon">🏃</span>
                         <span>5/10/21 KM</span>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -80,27 +80,27 @@ include 'includes/header.php';
 
 
 <!-- Hero Section -->
-<section class="hero-section">
+<section class="hero-section" style="background: #f8f9fa; padding: 5rem 0;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <div class="hero-content text-lg-start text-center">
-                    <h1 class="hero-title">Together<br>We're <span class="text-primary">Stronger</span></h1>
-                    <p class="hero-subtitle font-script">Fighting Liver Cancer, Fueling Hope</p>
-                    <p class="hero-description">
+                <div class="hero-content text-start">
+                    <p class="hero-subtitle font-script mb-3" style="color: #2d5016; font-size: 1.3rem;">Fighting Liver Cancer, Fueling Hope</p>
+                    <h1 class="hero-title mb-4" style="color: #333; font-size: 3.5rem; font-weight: 700;">
+                        Together<br>
+                        <span style="color: #f5a623;">We're Stronger</span>
+                    </h1>
+                    <p class="hero-description lead mb-5" style="color: #666; font-size: 1.2rem;">
                         Join our community of warriors, supporters, and researchers in the 
                         battle against liver cancer. Every step forward brings us closer to hope and healing.
                     </p>
-                    <div class="hero-buttons mt-4">
-                        <a href="#about" class="btn btn-primary-custom btn-custom me-3">Tell Me More</a>
-                        <a href="events.php" class="btn btn-outline-custom btn-custom">Join The Campaign</a>
+                    <div class="hero-buttons">
+                        <a href="#about" class="btn btn-lg me-3 px-4 py-3" style="background: #2d5016; color: white; border-radius: 50px;">Tell Me More</a>
+                        <a href="events.php" class="btn btn-outline-secondary btn-lg px-4 py-3" style="border-radius: 50px;">Join The Campaign</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
-                <!-- IMAGE NEEDED: Hero/banner image -->
-                <!-- Filename: hero-image.jpg or hero-banner.png -->
-                <!-- Description: Inspiring image of people together, medical/health theme, or foundation activities -->
                 <img src="assets/images/hero-image.jpg" alt="Together We're Stronger" class="img-fluid rounded-3 shadow-lg">
             </div>
         </div>
@@ -108,84 +108,78 @@ include 'includes/header.php';
 </section>
 
 <!-- Stats Section -->
-<section class="stats-section">
+<!-- Stats Section -->
+<section class="stats-section py-5" style="background-color: #f0f7f0;">
     <div class="container">
-        <div class="row">
+        <div class="row text-center">
+            
+            <!-- Stat 1 -->
             <div class="col-md-4 mb-4">
-                <div class="stats-card">
-                    <span class="stats-number">10000+</span>
-                    <p class="stats-label">Lives We Can Touch</p>
+                <div class="stats-card p-4 bg-white rounded shadow">
+                    <div class="stats-icon mb-3">
+                        <i class="fas fa-heart text-warning" style="font-size: 3rem;"></i>
+                    </div>
+                    <h3 class="stats-number display-4 fw-bold" style="color: #2d5016;">10000+</h3>
+                    <p class="stats-label text-muted">Lives We Can Touch</p>
                 </div>
             </div>
+            
+            <!-- Stat 2 -->
             <div class="col-md-4 mb-4">
-                <div class="stats-card">
-                    <span class="stats-number">500+</span>
-                    <p class="stats-label">Active Volunteers</p>
+                <div class="stats-card p-4 bg-white rounded shadow">
+                    <div class="stats-icon mb-3">
+                        <i class="fas fa-users text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h3 class="stats-number display-4 fw-bold" style="color: #2d5016;">500+</h3>
+                    <p class="stats-label text-muted">Active Volunteers</p>
                 </div>
             </div>
+            
+            <!-- Stat 3 -->
             <div class="col-md-4 mb-4">
-                <div class="stats-card">
-                    <span class="stats-number">50+</span>
-                    <p class="stats-label">Research Projects Funded</p>
+                <div class="stats-card p-4 bg-white rounded shadow">
+                    <div class="stats-icon mb-3">
+                        <i class="fas fa-flask text-success" style="font-size: 3rem;"></i>
+                    </div>
+                    <h3 class="stats-number display-4 fw-bold" style="color: #2d5016;">50+</h3>
+                    <p class="stats-label text-muted">Research Projects Funded</p>
                 </div>
             </div>
+            
         </div>
     </div>
 </section>
 
+
 <!-- About Section -->
-<section class="about-section" id="about">
+<section class="about-section py-5" style="background: white;">
     <div class="container">
-        <h2 class="section-title">About The Ben Kijuu Foundation</h2>
-        <p class="section-subtitle">
-            The Ben Kijuu Foundation strives to provide support, education, and 
-            resources to those affected by liver cancer and to fund research for better 
-            treatments and ultimately a cure.
-        </p>
-        
         <div class="row">
-    <div class="col-lg-4 mb-4">
-        <div class="feature-card">
-            <div class="feature-icon">
-                <i class="fas fa-hands-helping"></i>
+            <div class="col-lg-6">
+                <img src="assets/images/family-happy-kenya.jpg" alt="Happy African Family" class="img-fluid rounded-3 shadow-lg">
             </div>
-            <h3 class="feature-title">Support</h3>
-            <p class="feature-description">
-                Providing emotional and practical support to patients and families 
-                affected by liver cancer through our dedicated community network.
-            </p>
-        </div>
-    </div>
-    
-    <div class="col-lg-4 mb-4">
-        <div class="feature-card">
-            <div class="feature-icon">
-                <i class="fas fa-graduation-cap"></i>
+            <div class="col-lg-6">
+                <span class="text-uppercase" style="color: #f5a623; font-size: 0.9rem; font-weight: 600;">About Us</span>
+                <h2 class="section-title text-start mt-2 mb-4" style="color: #333; font-size: 2.5rem;">Every step forward brings us closer to<br>hope and healing.</h2>
+                <p class="mb-4" style="color: #666; line-height: 1.6;">
+                    The Ben Kijuu Foundation strives to provide support, education, and resources to those affected by liver cancer and to fund research for better treatments and ultimately a cure.
+                </p>
+                <p class="mb-4" style="color: #666; line-height: 1.6;">
+                    You can get involved with the Ben Kijuu Foundation by donating, volunteering, participating in our events, and spreading awareness about liver cancer. Visit our <a href="about.php" style="color: #2d5016;">'About Us'</a> page for more information, or <a href="partner.php" style="color: #2d5016;">Partner With Us</a>
+                </p>
+                
+                <div class="d-flex align-items-center mb-4">
+                    <div class="me-4">
+                        <i class="fas fa-hands-helping" style="font-size: 2rem; color: #f5a623;"></i>
+                    </div>
+                    <div>
+                        <h5 style="color: #333; margin: 0;">Volunteer with Us</h5>
+                        <p style="color: #666; margin: 0; font-size: 0.9rem;">Volunteers are the heart of our mission to combat liver cancer through education, support, and research.</p>
+                    </div>
+                </div>
+                
+                <a href="about.php" class="btn" style="background: #2d5016; color: white; border-radius: 50px; padding: 12px 30px;">Read More</a>
             </div>
-            <h3 class="feature-title">Education</h3>
-            <p class="feature-description">
-                Spreading awareness and knowledge about liver cancer prevention, 
-                symptoms, and treatment options to communities worldwide.
-            </p>
-        </div>
-    </div>
-    
-    <div class="col-lg-4 mb-4">
-        <div class="feature-card">
-            <div class="feature-icon">
-                <i class="fas fa-microscope"></i>
-            </div>
-            <h3 class="feature-title">Research</h3>
-            <p class="feature-description">
-                Funding innovative research projects aimed at developing better 
-                treatments and ultimately finding a cure for liver cancer.
-            </p>
-        </div>
-    </div>
-</div>
-        
-        <div class="text-center mt-5">
-            <a href="about.php" class="btn btn-primary-custom btn-custom">Read More About Us</a>
         </div>
     </div>
 </section>
@@ -201,21 +195,20 @@ include 'includes/header.php';
         
         <div class="row">
             <div class="col-lg-6 mb-4">
-                <div class="event-card">
-                    <!-- IMAGE NEEDED: Volunteer activities image -->
-                    <!-- Filename: volunteers.jpg or volunteer-activities.jpg -->
-                    <!-- Description: People volunteering, helping others, community work -->
-                    <img src="assets/images/volunteers.jpg" alt="Volunteer with Us" class="img-fluid">
-                    <div class="event-card-body">
-                        <h3 class="event-title">Volunteer with Us</h3>
-                        <p class="event-description">
-                            Volunteers are the heart of our mission to combat liver cancer through 
-                            education, support, and research. There are many ways to get involved 
-                            at varying capacities.
-                        </p>
-                        <a href="volunteer.php" class="btn btn-primary-custom btn-custom">Get Involved</a>
-                    </div>
-                </div>
+                <!-- Updated Event Card -->
+<div class="event-card bg-white rounded shadow-lg overflow-hidden">
+    <img src="assets/images/volunteers.jpg" alt="Volunteer with Us" class="img-fluid">
+    <div class="event-card-body p-4">
+        <h3 class="event-title mb-3" style="color: #2d5016;">Volunteer with Us</h3>
+        <p class="event-description text-muted mb-4">
+            Volunteers are the heart of our mission to combat liver cancer through 
+            education, support, and research. There are many ways to get involved 
+            at varying capacities.
+        </p>
+        <a href="volunteer.php" class="btn btn-warning btn-lg w-100">Get Involved</a>
+    </div>
+</div>
+
             </div>
             
             <div class="col-lg-6 mb-4">
@@ -264,16 +257,20 @@ include 'includes/header.php';
 </section>
 
 <!-- Call to Action Section -->
-<section class="cta-section">
+<section class="cta-section" style="background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%); padding: 5rem 0; color: white; text-align: center;">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <h2 class="cta-title">Every Step Forward Brings Us Closer To Hope And Healing</h2>
-                <p class="cta-description">
+                <h2 class="cta-title mb-4" style="font-size: 2.5rem; font-weight: 700; color: white;">
+                    Every Step Forward Brings Us Closer To Hope And Healing
+                </h2>
+                <p class="cta-description mb-4" style="font-size: 1.2rem; color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
                     Join us in raising vital funds for those battling liver cancer and 
                     in spreading awareness about this important cause.
                 </p>
-                <a href="donate.php" class="btn btn-danger btn-custom">♥ Donate Now</a>
+                <a href="donate.php" class="btn btn-lg px-5 py-3" style="background: #f5a623; color: #333; border: none; border-radius: 50px; font-weight: 600; font-size: 1.1rem;">
+                    ♥ Donate Now
+                </a>
             </div>
         </div>
     </div>
