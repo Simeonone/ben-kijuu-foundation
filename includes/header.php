@@ -21,12 +21,12 @@
 <body>
 
 <!-- Navigation -->
-<!-- Navigation - Bigger and Sticky -->
-<nav class="navbar navbar-expand-lg sticky-top" style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 1.5rem 0; z-index: 1000;">
-    <div class="container">
-        <!-- Logo - Bigger -->
-        <a class="navbar-brand" href="index.php">
-            <img src="assets/images/logo.png" alt="Ben Kijuu Foundation" style="height: 100%; width: 70px;">
+<!-- Navigation - Aligned with content and scaled up -->
+<nav class="navbar navbar-expand-lg sticky-top" style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 2rem 0; z-index: 1000;">
+    <div class="container"> <!-- Changed back to container to match content width -->
+        <!-- Logo -->
+        <a class="navbar-brand me-4" href="index.php">
+            <img src="assets/images/logo.png" alt="Ben Kijuu Foundation" style="height: 70px; width: 70px;">
         </a>
         
         <!-- Mobile toggle button -->
@@ -34,17 +34,17 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         
-        <!-- Navigation menu with green background wrapper - Bigger -->
+        <!-- Navigation menu with green background wrapper -->
         <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav-wrapper ms-auto" style="background: #2d5016; border-radius: 50px; padding: 12px 30px;">
+            <div class="navbar-nav-wrapper mx-auto" style="background: #2d5016; border-radius: 50px; padding: 15px 40px;">
                 <ul class="navbar-nav align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php" style="color: white !important; padding: 12px 8px; margin: 0 3px; font-size: 1.1rem;">Home</a>
+                        <a class="nav-link" href="index.php" style="color: white !important; padding: 15px 10px; margin: 0 5px; font-size: 1.15rem;">Home</a>
                     </li>
                     
                     <!-- Who We Are Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white !important; padding: 12px 8px; margin: 0 3px; font-size: 1.1rem;">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white !important; padding: 15px 10px; margin: 0 5px; font-size: 1.15rem;">
                             Who We Are
                         </a>
                         <ul class="dropdown-menu" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
@@ -56,7 +56,7 @@
                     
                     <!-- About Liver Cancer Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white !important; padding: 12px 8px; margin: 0 3px; font-size: 1.1rem;">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white !important; padding: 15px 10px; margin: 0 5px; font-size: 1.15rem;">
                             About Liver Cancer
                         </a>
                         <ul class="dropdown-menu" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
@@ -68,28 +68,27 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="events.php" style="color: white !important; padding: 12px 8px; margin: 0 3px; font-size: 1.1rem;">Events</a>
+                        <a class="nav-link" href="events.php" style="color: white !important; padding: 15px 10px; margin: 0 5px; font-size: 1.15rem;">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php" style="color: white !important; padding: 12px 8px; margin: 0 3px; font-size: 1.1rem;">Contact Us</a>
+                        <a class="nav-link" href="contact.php" style="color: white !important; padding: 15px 10px; margin: 0 5px; font-size: 1.15rem;">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.php" style="color: white !important; padding: 12px 8px; margin: 0 6px; font-size: 1.1rem;">FAQs</a>
+                        <a class="nav-link" href="faq.php" style="color: white !important; padding: 15px 10px; margin: 0 8px; font-size: 1.15rem;">FAQs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.php" style="color: white !important; padding: 12px 8px; margin: 0 6px; font-size: 1.1rem;">Blog</a>
+                        <a class="nav-link" href="blog.php" style="color: white !important; padding: 15px 10px; margin: 0 8px; font-size: 1.15rem;">Blog</a>
                     </li>
                 </ul>
             </div>
             
-            <!-- Donate Button - Bigger -->
-            <a href="donate.php" class="btn ms-3" style="background: #f5a623; color: #333; border-radius: 50px; padding: 15px 30px; font-weight: 600; font-size: 1.1rem;">
+            <!-- Donate Button - Scaled up -->
+            <a href="donate.php" class="btn ms-4" style="background: #f5a623; color: #333; border-radius: 50px; padding: 18px 35px; font-weight: 600; font-size: 1.15rem;">
                 <i class="fas fa-heart me-2"></i>Donate Now
             </a>
         </div>
     </div>
 </nav>
-
 <script>
 // Smooth scroll to footer
 function scrollToFooter() {

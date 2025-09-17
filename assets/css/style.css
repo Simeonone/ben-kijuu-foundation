@@ -1669,3 +1669,143 @@ html {
         font-size: 0.9rem;
     }
 }
+
+/* Remove excessive navbar margins */
+.navbar-nav.ms-auto {
+    margin-left: 0 !important;
+}
+
+/* Target the navbar wrapper specifically */
+.navbar-nav-wrapper.ms-auto {
+    margin-left: 0 !important;
+}
+
+/* If you have a custom wrapper div */
+.navbar-collapse .ms-auto {
+    margin-left: 0 !important;
+}
+
+/* Remove any automatic margins on the navbar container */
+.navbar>.container,
+.navbar>.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Fix navbar spacing - Even distribution */
+.navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.navbar-brand {
+    flex: 0 0 auto;
+}
+
+.navbar-collapse {
+    flex: 0 0 auto;
+}
+
+.navbar-donate-section {
+    flex: 0 0 auto;
+}
+
+/* Remove the problematic ms-auto class effects */
+.navbar-nav-wrapper.ms-auto,
+.navbar-nav-wrapper {
+    margin: 0 !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 991px) {
+    .navbar .container-fluid {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .navbar-donate-section {
+        order: 2;
+    }
+
+    .navbar-collapse {
+        order: 3;
+        width: 100%;
+    }
+}
+
+/* Header alignment and scaling */
+.navbar {
+    padding: 2rem 0 !important;
+    /* Scaled up padding */
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    flex: 0 0 auto;
+}
+
+.navbar-collapse {
+    flex: 1 1 auto;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-nav-wrapper {
+    flex: 0 0 auto;
+}
+
+.navbar-brand img {
+    height: 70px !important;
+    /* Scaled up logo */
+    width: 70px !important;
+}
+
+/* Scaled up navigation wrapper */
+.navbar-nav-wrapper {
+    padding: 15px 40px !important;
+    background: #2d5016 !important;
+    border-radius: 50px !important;
+}
+
+.navbar-nav .nav-link {
+    padding: 15px 10px !important;
+    margin: 0 5px !important;
+    font-size: 1.15rem !important;
+}
+
+/* Scaled up donate button */
+.navbar .btn {
+    padding: 18px 35px !important;
+    font-size: 1.15rem !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 991px) {
+    .navbar {
+        padding: 1.5rem 0 !important;
+    }
+
+    .navbar-collapse {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .navbar-nav-wrapper {
+        width: 100%;
+        text-align: center;
+        padding: 20px !important;
+    }
+
+    .navbar-brand img {
+        height: 60px !important;
+        width: 60px !important;
+    }
+}
