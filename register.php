@@ -238,19 +238,19 @@ include 'includes/header.php';
 function showConsent() {
     const terms = [
         `1. Voluntary Participation
-I am voluntarily participating in the Liver Cancer Awareness Walk organized by the Ben Kijuu Foundation...`,
+I am voluntarily participating in the Liver Cancer Awareness Walk organized by the Ben Kijuu Foundation (“the Foundation”). I understand that participation involves physical activity which may include walking long distances, exposure to weather conditions, crowds, and other inherent risks.`,
         `2. Assumption of Risk
-I acknowledge and accept that participation may involve certain risks...`,
+I acknowledge and accept that participation may involve certain risks, including but not limited to personal injury, illness, property damage, or other unforeseen incidents. I confirm that I am in good health, physically fit, and medically cleared to participate. I take full responsibility for my participation and voluntarily assume all risks associated with the event.`,
         `3. Waiver and Release of Liability
-To the fullest extent permitted by law, I hereby release...`,
+To the fullest extent permitted by law, I hereby release, discharge, and hold harmless the Ben Kijuu Foundation, its Trustees, officers, employees, volunteers, agents, sponsors, and partners from any and all claims, demands, actions, losses, liabilities, damages, costs, or expenses (including legal fees) arising from or connected with my participation in the event, whether caused by negligence or otherwise.`,
         `4. Indemnity
-I agree to indemnify and keep indemnified the Foundation...`,
+I agree to indemnify and keep indemnified the Foundation, its Trustees, officers, employees, volunteers, agents, sponsors, and partners against any loss, damage, liability, or costs they may incur arising from my actions, conduct, or participation in the event.`,
         `5. Medical Treatment Consent
-In the event of a medical emergency, I consent...`,
+In the event of a medical emergency, I consent to the administration of first aid or medical treatment deemed necessary by qualified personnel. I agree to bear all medical costs arising from such treatment.`,
         `6. Use of Image and Likeness
-I consent to the use of my name, photographs, video recordings...`,
+I consent to the use of my name, photographs, video recordings, or likeness taken during the event for publicity, awareness campaigns, reports, or promotional materials by the Foundation without compensation.`,
         `7. Binding Effect
-I confirm that I have read and understood this Consent, Waiver, and Indemnity Agreement...`
+I confirm that I have read and understood this Consent, Waiver, and Indemnity Agreement, and that it is binding upon me, my heirs, executors, administrators, successors, and assigns.`
     ];
 
     for (let i = 0; i < terms.length; i++) {
