@@ -1440,6 +1440,7 @@ html {
 
     .play-btn-wrapper {
         margin-top: 1rem;
+        display: none !important;
     }
 
     .play-btn {
