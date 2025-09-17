@@ -5,8 +5,8 @@ $page_title = 'Home';
 include 'includes/header.php';
 ?>
 
-<!-- Event Popup Modal - ADD THIS ENTIRE SECTION HERE -->
-<div class="event-popup-overlay" id="eventPopup">
+<!-- Event Popup Modal - SIMPLIFIED VERSION -->
+<div class="event-popup-overlay" id="eventPopup" style="display: none;">
     <div class="event-popup-container">
         <div class="event-popup-content">
             <!-- Close button -->
@@ -14,65 +14,24 @@ include 'includes/header.php';
                 <i class="fas fa-times"></i>
             </button>
             
-            <!-- Decorative elements -->
+            <!-- Minimal decorative elements -->
             <div class="popup-decoration">
                 <div class="ribbon-banner">
                     <span>UPCOMING EVENT</span>
                 </div>
-                <div class="floating-hearts">
-                    <div class="heart heart-1">♥</div>
-                    <div class="heart heart-2">♥</div>
-                    <div class="heart heart-3">♥</div>
-                </div>
-                <div class="corner-ornament corner-top-left"></div>
-                <div class="corner-ornament corner-top-right"></div>
-                <div class="corner-ornament corner-bottom-left"></div>
-                <div class="corner-ornament corner-bottom-right"></div>
             </div>
             
             <!-- Main poster image -->
             <div class="poster-container">
-                <!-- PLACE YOUR WALK/RUN POSTER IMAGE HERE -->
-                <!-- Save your image as: assets/images/walk-run-poster.jpg -->
                 <img src="assets/images/walk-run-poster.jpg" alt="Walk/Run for Liver Cancer - October 10th, 2025" class="poster-image">
-                
-                <!-- Overlay glow effect -->
-                <div class="poster-glow"></div>
             </div>
             
-            <!-- Call-to-action section -->
+            <!-- Simple call-to-action - just the button -->
             <div class="popup-cta">
-                <div class="pulse-circle">
-                    <div class="pulse-ring"></div>
-                    <div class="pulse-ring pulse-ring-delay"></div>
-                </div>
-                
-                <h3 class="popup-title">Don't Miss Out!</h3>
-                <p class="popup-subtitle">Join us for this meaningful cause</p>
-                
-                <div class="popup-buttons">
-                    <a href="register.php" class="btn-popup-register">
-                        <span class="btn-text">Register Now</span>
-                        <span class="btn-icon">🏃‍♀️</span>
-                    </a>
-                    <button class="btn-popup-later" id="laterBtn">Maybe Later</button>
-                </div>
-                
-                <!-- Event highlights -->
-                <!-- <div class="event-highlights">
-                    <div class="highlight-item">
-                        <span class="highlight-icon">📍</span>
-                        <span>Karura Forest</span>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="highlight-icon">🕐</span>
-                        <span>07:00 AM</span>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="highlight-icon">🏃</span>
-                        <span>5/10/21 KM</span>
-                    </div>
-                </div> -->
+                <a href="register.php" class="btn-popup-register">
+                    <span class="btn-text">Register Now</span>
+                    <span class="btn-icon">🏃‍♀️</span>
+                </a>
             </div>
         </div>
     </div>
