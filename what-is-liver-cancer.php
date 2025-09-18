@@ -144,6 +144,180 @@ include 'includes/header.php';
 
                     <!-- Continue with other accordion items as provided previously... -->
                     <!-- (Include all 9 types as I provided in the previous response) -->
+                     <!-- Angiosarcoma -->
+                    <div class="accordion-item mb-3" style="border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 15px;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#angio" 
+                                    style="background: #f8f9fa; border-radius: 15px; font-weight: 600; color: #32665B;">
+                                <i class="fas fa-plus-circle me-3" style="color: #DAA520;"></i>
+                                Angiosarcoma
+                            </button>
+                        </h2>
+                        <div id="angio" class="accordion-collapse collapse" data-bs-parent="#liverCancerAccordion">
+                            <div class="accordion-body" style="background: white; border-radius: 0 0 15px 15px;">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <h6 style="color: #32665B; font-weight: 600;">Where Does the Cancer Start?</h6>
+                                        <p style="color: #666; margin-bottom: 0;">Blood vessels in the liver</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 style="color: #32665B; font-weight: 600;">How Common Is the Cancer?</h6>
+                                        <p style="color: #666; margin-bottom: 0;">Accounts for less than 1% of liver cancers</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallbladder cancer -->
+                    <div class="accordion-item mb-3" style="border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 15px;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gallbladder" 
+                                    style="background: #f8f9fa; border-radius: 15px; font-weight: 600; color: #32665B;">
+                                <i class="fas fa-plus-circle me-3" style="color: #DAA520;"></i>
+                                Gallbladder cancer
+                            </button>
+                        </h2>
+                        <div id="gallbladder" class="accordion-collapse collapse" data-bs-parent="#liverCancerAccordion">
+                            <div class="accordion-body" style="background: white; border-radius: 0 0 15px 15px;">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <h6 style="color: #32665B; font-weight: 600;">Where Does the Cancer Start?</h6>
+                                        <p style="color: #666; margin-bottom: 0;">Gallbladder lining</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 style="color: #32665B; font-weight: 600;">How Common Is the Cancer?</h6>
+                                        <p style="color: #666; margin-bottom: 0;">Accounts for less than 1% of liver cancers</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hepatoblastoma -->
+                    <div class="accordion-item mb-3" style="border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 15px;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hepatoblastoma" 
+                                    style="background: #f8f9fa; border-radius: 15px; font-weight: 600; color: #32665B;">
+                                <i class="fas fa-plus-circle me-3" style="color: #DAA520;"></i>
+                                Hepatoblastoma
+                            </button>
+                        </h2>
+                        <div id="hepatoblastoma" class="accordion-collapse collapse" data-bs-parent="#liverCancerAccordion">
+                            <div class="accordion-body" style="background: white; border-radius: 0 0 15px 15px;">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <h6 style="color: #32665B; font-weight: 600;">Where Does the Cancer Start?</h6>
+                                        <p style="color: #666; margin-bottom: 0;">Embryonic (or early stage) liver cells</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 style="color: #32665B; font-weight: 600;">How Common Is the Cancer?</h6>
+                                        <p style="color: #666; margin-bottom: 0;">Very rare kind of liver cancer usually found in children younger than 4 years</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fibrolamellar carcinoma -->
+                    <div class="accordion-item mb-3" style="border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 15px;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fibrolamellar" 
+                                    style="background: #f8f9fa; border-radius: 15px; font-weight: 600; color: #32665B;">
+                                <i class="fas fa-plus-circle me-3" style="color: #DAA520;"></i>
+                                Fibrolamellar carcinoma
+                            </button>
+                        </h2>
+                        <div id="fibrolamellar" class="accordion-collapse collapse" data-bs-parent="#liverCancerAccordion">
+                            <div class="accordion-body" style="background: white; border-radius: 0 0 15px 15px;">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <h6 style="color: #32665B; font-weight: 600;">Where Does the Cancer Start?</h6>
+                                        <p style="color: #666; margin-bottom: 0;">Found in hepatocytes but often involves growth into the bile ducts</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 style="color: #32665B; font-weight: 600;">How Common Is the Cancer?</h6>
+                                        <p style="color: #666; margin-bottom: 0;">Rare and unique form of liver cancer occurring most commonly in children and young adults without hepatitis or cirrhosis. Accounts for less than 1% to 8% of all hepatocellular carcinomas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Undifferentiated embryonal sarcoma of the liver (UESL) -->
+                    <div class="accordion-item mb-3" style="border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 15px;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#uesl" 
+                                    style="background: #f8f9fa; border-radius: 15px; font-weight: 600; color: #32665B;">
+                                <i class="fas fa-plus-circle me-3" style="color: #DAA520;"></i>
+                                Undifferentiated embryonal sarcoma of the liver (UESL)
+                            </button>
+                        </h2>
+                        <div id="uesl" class="accordion-collapse collapse" data-bs-parent="#liverCancerAccordion">
+                            <div class="accordion-body" style="background: white; border-radius: 0 0 15px 15px;">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <h6 style="color: #32665B; font-weight: 600;">Where Does the Cancer Start?</h6>
+                                        <p style="color: #666; margin-bottom: 0;">Tumor often spreads all through the liver and/or to the lungs.</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 style="color: #32665B; font-weight: 600;">How Common Is the Cancer?</h6>
+                                        <p style="color: #666; margin-bottom: 0;">The third most common liver cancer in children and adolescents; usually occurs in children aged between 5 and 10 years</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Infantile choriocarcinoma -->
+                    <div class="accordion-item mb-3" style="border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 15px;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#infantile" 
+                                    style="background: #f8f9fa; border-radius: 15px; font-weight: 600; color: #32665B;">
+                                <i class="fas fa-plus-circle me-3" style="color: #DAA520;"></i>
+                                Infantile choriocarcinoma
+                            </button>
+                        </h2>
+                        <div id="infantile" class="accordion-collapse collapse" data-bs-parent="#liverCancerAccordion">
+                            <div class="accordion-body" style="background: white; border-radius: 0 0 15px 15px;">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <h6 style="color: #32665B; font-weight: 600;">Where Does the Cancer Start?</h6>
+                                        <p style="color: #666; margin-bottom: 0;">Starts in the placenta and spreads to the fetus</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 style="color: #32665B; font-weight: 600;">How Common Is the Cancer?</h6>
+                                        <p style="color: #666; margin-bottom: 0;">Very rare type of cancer usually found during the first few months of life</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Epithelioid hemangioendothelioma -->
+                    <div class="accordion-item mb-3" style="border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 15px;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#epithelioid" 
+                                    style="background: #f8f9fa; border-radius: 15px; font-weight: 600; color: #32665B;">
+                                <i class="fas fa-plus-circle me-3" style="color: #DAA520;"></i>
+                                Epithelioid hemangioendothelioma
+                            </button>
+                        </h2>
+                        <div id="epithelioid" class="accordion-collapse collapse" data-bs-parent="#liverCancerAccordion">
+                            <div class="accordion-body" style="background: white; border-radius: 0 0 15px 15px;">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <h6 style="color: #32665B; font-weight: 600;">Where Does the Cancer Start?</h6>
+                                        <p style="color: #666; margin-bottom: 0;">Cancer of the blood vessels in the liver and other organs</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 style="color: #32665B; font-weight: 600;">How Common Is the Cancer?</h6>
+                                        <p style="color: #666; margin-bottom: 0;">Rare type of cancer occurring in infants; tumors are often benign (not cancer), but a small number of children may develop cancerous tumors over time</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>

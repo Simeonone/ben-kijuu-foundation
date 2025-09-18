@@ -83,9 +83,9 @@
             <div class="col-lg-2 col-md-6 mb-4">
                 <h5 class="mb-3" style="color: #f5a623;">Quick Links</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="about.php" style="color: #d1d5db; text-decoration: none;">About Us</a></li>
+                    <li class="mb-2"><a href="/ben-kijuu-foundation/privacy.php" style="color: #d1d5db; text-decoration: none;">About Us</a></li>
                     <li class="mb-2"><a href="contact.php" style="color: #d1d5db; text-decoration: none;">Contact Us</a></li>
-                    <li class="mb-2"><a href="expansion.php" style="color: #d1d5db; text-decoration: none;">Expansion Plan</a></li>
+                    <li class="mb-2"><a href="/ben-kijuu-foundation/expansion.php" style="color: #d1d5db; text-decoration: none;">Expansion Plan</a></li>
                     <li class="mb-2"><a href="privacy.php" style="color: #d1d5db; text-decoration: none;">Legal & Privacy</a></li>
                 </ul>
             </div>
@@ -95,7 +95,7 @@
                 <h5 class="mb-3" style="color: #f5a623;">More Pages</h5>
                 <ul class="list-unstyled">
                     <li class="mb-2"><a href="story.php" style="color: #d1d5db; text-decoration: none;">The Story</a></li>
-                    <li class="mb-2"><a href="partner.php" style="color: #d1d5db; text-decoration: none;">Partner With Us</a></li>
+                    <li class="mb-2"><a href="/ben-kijuu-foundation/partner.php" style="color: #d1d5db; text-decoration: none;">Partner With Us</a></li>
                     <li class="mb-2"><a href="faq.php" style="color: #d1d5db; text-decoration: none;">FAQs</a></li>
                     <li class="mb-2"><a href="blog.php" style="color: #d1d5db; text-decoration: none;">Blog</a></li>
                 </ul>
@@ -127,10 +127,10 @@
                 
                 <!-- Social Media -->
                 <div class="d-flex gap-3">
-                    <a href="#" style="color: #d1d5db; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
-                    <a href="#" style="color: #d1d5db; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
-                    <a href="#" style="color: #d1d5db; font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
-                    <a href="#" style="color: #d1d5db; font-size: 1.5rem;"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/ben_kijuu_fdn" style="color: #d1d5db; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61575287167534" style="color: #d1d5db; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/benkijuufound" style="color: #d1d5db; font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.tiktok.com/@benkijuufoundation" style="color: #d1d5db; font-size: 1.5rem;"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
             
