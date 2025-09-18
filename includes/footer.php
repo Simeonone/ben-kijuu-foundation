@@ -84,9 +84,9 @@
                 <h5 class="mb-3" style="color: #f5a623;">Quick Links</h5>
                 <ul class="list-unstyled">
                     <li class="mb-2"><a href="/ben-kijuu-foundation/privacy.php" style="color: #d1d5db; text-decoration: none;">About Us</a></li>
-                    <li class="mb-2"><a href="contact.php" style="color: #d1d5db; text-decoration: none;">Contact Us</a></li>
+                    <li class="mb-2"><a href="/ben-kijuu-foundation/contact.php" style="color: #d1d5db; text-decoration: none;">Contact Us</a></li>
                     <li class="mb-2"><a href="/ben-kijuu-foundation/expansion.php" style="color: #d1d5db; text-decoration: none;">Expansion Plan</a></li>
-                    <li class="mb-2"><a href="privacy.php" style="color: #d1d5db; text-decoration: none;">Legal & Privacy</a></li>
+                    <li class="mb-2"><a href="/ben-kijuu-foundation/privacy.php" style="color: #d1d5db; text-decoration: none;">Legal & Privacy</a></li>
                 </ul>
             </div>
             
