@@ -1992,3 +1992,42 @@ html {
     content: "→";
     color: #DAA520;
 }
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+.gallery-item:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .photo-gallery .col-6 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .photo-gallery .row {
+        flex-direction: column;
+    }
+
+    .photo-gallery .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
